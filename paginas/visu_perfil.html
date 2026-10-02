@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <!-- Importa boostrap  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/assets/infinity.png">
+    <!-- Seu arquivo CSS externo existente -->
+    <link rel="stylesheet" href="/css/style_visu_perfil.css">
+    <!-- Icone de perfil -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!--Google fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!--biblioteca javascript para modais botao hamburguer-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body class="d-block p-0 bg-black">
+
+  <!-- ELEMENTOS DE LUZ NEON AO FUNDO -->
+  <div class="glow-bg-top-left"></div>
+  <div class="glow-bg-bottom-right"></div>
+
+  <!-- NAVBAR SUPERIOR -->
+  <nav class="navbar navbar-expand-lg border-bottom border-secondary border-opacity-25 px-4 py-3 position-relative z-3" style="background: rgba(12, 13, 18, 0.85); backdrop-filter: blur(10px);">
+    <div class="container-fluid max-width-1100">
+      <div class="d-flex align-items-center gap-2">
+        <div class="brand-logo-container">
+          <img src="/assets/infinity.png" alt="Infinity School Logo" class="brand-logo-img">
+        </div>
+        
+      </div>
+
+      <div class="d-flex align-items-center gap-3">
+        <a href="perfil.html" class="btn btn-outline-secondary btn-sm rounded-pill text-white border-secondary border-opacity-50">
+          <i class="bi bi-pencil me-1"></i> Editar Meu Perfil
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CONTAINER PRINCIPAL DO PERFIL -->
+  <div class="container py-5 position-relative z-1" style="max-width: 1100px;">
+    
+    <!-- CARD DE APRESENTAÇÃO DO PERFIL -->
+    <div class="login-container mb-4">
+      <!-- Banner de Capa -->
+      <div style="height: 180px; background: linear-gradient(90deg, rgba(255,0,60,0.4) 0%, rgba(5,5,8,0.85) 100%), url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80') center/cover;"></div>
+      
+      <div class="px-4 pb-4 position-relative">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center align-items-md-end mt-n5 gap-3">
+          
+          <!-- Avatar e Nome -->
+          <div class="d-flex flex-column flex-md-row align-items-center align-items-md-end gap-3 text-center text-md-start">
+            <div class="position-relative" style="margin-top: -60px;">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=250&q=80" alt="Ana Clara Silva" class="rounded-circle border border-3 border-danger shadow-lg" style="width: 120px; height: 120px; object-fit: cover;">
+              <span class="position-absolute bottom-0 end-0 bg-danger rounded-circle p-2 border border-2 border-dark" title="Perfil Verificado">
+                <i class="bi bi-patch-check-fill text-white d-block" style="font-size: 0.85rem;"></i>
+              </span>
+            </div>
+            <div>
+              <h3 class="fw-bold mb-0 text-white">Ana Clara Silva</h3>
+              <p class="text-custom-muted mb-0"><i class="bi bi-code-slash text-danger me-1"></i> Desenvolvedora Full Stack & QA Intern</p>
+            </div>
+          </div>
+
+          <!-- Botão de Ação e Redes Sociais -->
+          <div class="d-flex align-items-center gap-2">
+            <a href="mailto:anaclara@exemplo.com" class="btn btn-primary-red py-2 px-3">
+              <i class="bi bi-envelope-fill me-1"></i> Entrar em Contato
+            </a>
+            <a href="https://github.com" target="_blank" class="social-btn" aria-label="GitHub">
+              <i class="bi bi-github"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" class="social-btn" aria-label="LinkedIn">
+              <i class="bi bi-linkedin"></i>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Badges & Localização -->
+        <div class="d-flex flex-wrap gap-2 mt-4 pt-3 border-top border-secondary border-opacity-25">
+          <span class="badge-tag"><i class="bi bi-geo-alt text-danger me-1"></i> São Paulo, BR</span>
+          <span class="badge-tag"><i class="bi bi-mortarboard text-danger me-1"></i> Aluno Infinity School</span>
+          <span class="badge-tag"><i class="bi bi-check-circle text-danger me-1"></i> Disponível para Projetos</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARDS DE ESTATÍSTICAS -->
+    <div class="row g-3 mb-4">
+      <div class="col-md-4">
+        <div class="glass-overlay-card d-flex align-items-center gap-3">
+          <div class="bg-danger bg-opacity-10 p-3 rounded-3 text-danger border border-danger border-opacity-25">
+            <i class="bi bi-folder-check fs-3"></i>
+          </div>
+          <div>
+            <h3 class="fw-bold mb-0 text-white">12</h3>
+            <small class="text-custom-muted">Projetos Publicados</small>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="glass-overlay-card d-flex align-items-center gap-3">
+          <div class="bg-danger bg-opacity-10 p-3 rounded-3 text-danger border border-danger border-opacity-25">
+            <i class="bi bi-heart fs-3"></i>
+          </div>
+          <div>
+            <h3 class="fw-bold mb-0 text-white">328</h3>
+            <small class="text-custom-muted">Curtidas Recebidas</small>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="glass-overlay-card d-flex align-items-center gap-3">
+          <div class="bg-danger bg-opacity-10 p-3 rounded-3 text-danger border border-danger border-opacity-25">
+            <i class="bi bi-eye fs-3"></i>
+          </div>
+          <div>
+            <h3 class="fw-bold mb-0 text-white">1.450</h3>
+            <small class="text-custom-muted">Visualizações do Perfil</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SEÇÃO: SOBRE MIM & PROJETOS -->
+    <div class="row g-4">
+      
+      <!-- COLUNA DA ESQUERDA: BIOGRAFIA -->
+      <div class="col-lg-4">
+        <div class="login-container p-4 h-100">
+          <h5 class="fw-bold mb-3 text-white"><i class="bi bi-person-badge text-danger me-2"></i>Sobre Mim</h5>
+          <p class="text-custom-muted style-text small mb-4">
+            Estudante de desenvolvimento web e testes de software (QA). Apaixonada por criar interfaces modernas, funcionais e com alta qualidade visual e técnica.
+          </p>
+
+          <h6 class="fw-bold text-white mb-2 fs-6">Habilidades Principais</h6>
+          <div class="d-flex flex-wrap gap-2">
+            <span class="badge-tag">JavaScript</span>
+            <span class="badge-tag">QA & Testes</span>
+            <span class="badge-tag">HTML5 / CSS3</span>
+            <span class="badge-tag">Bootstrap 5</span>
+            <span class="badge-tag">Mermaid.js</span>
+            <span class="badge-tag">Node.js</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- COLUNA DA DIREITA: VITRINE DE PROJETOS -->
+      <div class="col-lg-8">
+        <div class="login-container p-4">
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <h5 class="fw-bold mb-0 text-white"><i class="bi bi-grid text-danger me-2"></i>Projetos em Destaque</h5>
+            <span class="badge bg-danger bg-opacity-25 text-danger border border-danger border-opacity-25">12 Projetos</span>
+          </div>
+
+          <div class="row g-3">
+            
+            <!-- PROJETO 1 -->
+            <div class="col-md-6">
+              <div class="glass-overlay-card p-0 overflow-hidden h-100 d-flex flex-column justify-content-between">
+                <div>
+                  <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=500&q=80" alt="Sistema de Telediagnóstico" class="w-100" style="height: 150px; object-fit: cover;">
+                  <div class="p-3">
+                    <span class="badge bg-danger bg-opacity-25 text-danger border border-danger border-opacity-25 mb-2">Web App</span>
+                    <h6 class="fw-bold text-white mb-1">Sistema de Telediagnóstico</h6>
+                    <p class="text-custom-muted small mb-0">Plataforma para centralização e envio de laudos médicos à distância.</p>
+                  </div>
+                </div>
+                <div class="p-3 pt-0 d-flex justify-content-between align-items-center">
+                  <small class="text-custom-muted"><i class="bi bi-heart-fill text-danger me-1"></i> 142</small>
+                  <a href="projeto-detalhes.html" class="link-red fw-bold">Ver Projeto <i class="bi bi-arrow-right me-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- PROJETO 2 -->
+            <div class="col-md-6">
+              <div class="glass-overlay-card p-0 overflow-hidden h-100 d-flex flex-column justify-content-between">
+                <div>
+                  <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=500&q=80" alt="Guia Clínico DART" class="w-100" style="height: 150px; object-fit: cover;">
+                  <div class="p-3">
+                    <span class="badge bg-danger bg-opacity-25 text-danger border border-danger border-opacity-25 mb-2">Mobile / UX</span>
+                    <h6 class="fw-bold text-white mb-1">Guia Clínico DART</h6>
+                    <p class="text-custom-muted small mb-0">Interface para descalonamento de antimicrobianos na rotina médica.</p>
+                  </div>
+                </div>
+                <div class="p-3 pt-0 d-flex justify-content-between align-items-center">
+                  <small class="text-custom-muted"><i class="bi bi-heart-fill text-danger me-1"></i> 89</small>
+                  <a href="projeto-detalhes.html" class="link-red fw-bold">Ver Projeto <i class="bi bi-arrow-right me-1"></i></a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

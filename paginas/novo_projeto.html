@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastrar Novo Projeto</title>
+  
+  <!-- Bootstrap 5 CSS (Via CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Bootstrap Icons (Via CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  
+  <!-- Seu arquivo CSS externo existente -->
+  <link rel="stylesheet" href="/css/style_novo_projeto.css">
+</head>
+<body class="d-block p-0">
+
+  <!-- ELEMENTOS DE LUZ NEON AO FUNDO -->
+  <div class="glow-bg-top-left"></div>
+  <div class="glow-bg-bottom-right"></div>
+
+  <!-- NAVBAR SUPERIOR -->
+  <nav class="navbar navbar-expand-lg border-bottom border-secondary border-opacity-25 px-4 py-3 position-relative z-3" style="background: rgba(12, 13, 18, 0.85); backdrop-filter: blur(10px);">
+    <div class="container-fluid max-width-1100">
+      <div class="d-flex align-items-center gap-2">
+        <div class="brand-logo-container">
+          <img src="https://infinityschool.com.br/wp-content/uploads/2023/02/Logo-Infinity-School.png" alt="Infinity School Logo" class="brand-logo-img">
+        </div>
+        <div>
+          <h6 class="mb-0 fw-bold text-white">PORTFÓLIO <span class="text-danger glow-text">TECH</span></h6>
+          <small class="text-custom-muted brand-subtext">PAINEL DO ALUNO</small>
+        </div>
+      </div>
+
+      <div class="d-flex align-items-center gap-3">
+        <a href="perfil.html" class="btn btn-outline-secondary btn-sm rounded-pill text-white border-secondary border-opacity-50">
+          <i class="bi bi-arrow-left me-1"></i> Voltar ao Perfil
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CONTAINER PRINCIPAL DA TELA DE NOVO PROJETO -->
+  <div class="container py-5 position-relative z-1" style="max-width: 1100px;">
+    
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <div>
+        <h2 class="fw-bold text-white mb-1"><i class="bi bi-plus-circle text-danger me-2"></i>Cadastrar Novo Projeto</h2>
+        <p class="text-custom-muted mb-0">Preencha as informações para adicionar um novo projeto ao seu portfólio.</p>
+      </div>
+    </div>
+
+    <form id="newProjectForm">
+      <div class="row g-4">
+        
+        <!-- COLUNA DA ESQUERDA: INFOS PRINCIPAIS & MÍDIA -->
+        <div class="col-lg-7">
+          
+          <!-- CARD DE IMAGEM DE CAPA -->
+          <div class="login-container p-4 mb-4">
+            <h5 class="fw-bold mb-1 text-white"><i class="bi bi-image text-danger me-2"></i>Imagem de Capa</h5>
+            <p class="text-custom-muted small mb-3">Envie uma captura de tela ou preview principal do projeto</p>
+
+            <!-- Box de Drag and Drop -->
+            <div class="p-4 text-center border border-dashed rounded-3" style="border-color: rgba(255, 255, 255, 0.2) !important; background: rgba(12, 13, 18, 0.6); cursor: pointer;">
+              <i class="bi bi-cloud-arrow-up fs-1 text-danger d-block mb-2"></i>
+              <h6 class="fw-bold text-white mb-1">Arraste e solte sua imagem aqui</h6>
+              <p class="text-custom-muted small mb-3">Suporta PNG, JPG ou WEBP (Max. 5MB)</p>
+              <label for="projectImage" class="btn btn-google btn-sm">
+                <i class="bi bi-folder2-open me-1"></i> Selecionar Arquivo
+              </label>
+              <input type="file" id="projectImage" class="d-none" accept="image/*">
+            </div>
+          </div>
+
+          <!-- CARD DE INFORMAÇÕES BÁSICAS -->
+          <div class="login-container p-4 mb-4">
+            <h5 class="fw-bold mb-3 text-white"><i class="bi bi-file-earmark-text text-danger me-2"></i>Informações do Projeto</h5>
+
+            <!-- Título do Projeto -->
+            <div class="mb-3">
+              <label for="projectTitle" class="form-label-custom">Título do Projeto</label>
+              <div class="input-group custom-input-group">
+                <span class="input-group-text"><i class="bi bi-type"></i></span>
+                <input type="text" id="projectTitle" class="form-control" placeholder="Ex: Sistema de Telediagnóstico" required>
+              </div>
+            </div>
+
+            <!-- Categoria -->
+            <div class="mb-3">
+              <label for="projectCategory" class="form-label-custom">Categoria</label>
+              <div class="input-group custom-input-group">
+                <span class="input-group-text"><i class="bi bi-tag"></i></span>
+                <select id="projectCategory" class="form-select form-select-dark border-0 bg-transparent text-white" required>
+                  <option value="" disabled selected>Selecione uma categoria...</option>
+                  <option value="web">Aplicação Web</option>
+                  <option value="mobile">Aplicação Mobile</option>
+                  <option value="qa">Testes / QA & Automação</option>
+                  <option value="ux">UI/UX Design</option>
+                  <option value="backend">API / Back-End</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Descrição Detalhada -->
+            <div class="mb-3">
+              <label for="projectDescription" class="form-label-custom">Descrição Detalhada</label>
+              <div class="custom-input-group p-2">
+                <textarea id="projectDescription" class="form-control" rows="4" placeholder="Explique os objetivos, arquitetura, testes e resultados do projeto..." style="background: transparent; border: none; color: #fff;"></textarea>
+              </div>
+            </div>
+
+            <!-- Tecnologias (Tags) -->
+            <div>
+              <label for="projectTechs" class="form-label-custom">Tecnologias Utilizadas (separadas por vírgula)</label>
+              <div class="input-group custom-input-group mb-2">
+                <span class="input-group-text"><i class="bi bi-code-slash"></i></span>
+                <input type="text" id="projectTechs" class="form-control" placeholder="Ex: JavaScript, Bootstrap, Node.js, ISO 25010">
+              </div>
+              <div class="d-flex flex-wrap gap-1">
+                <span class="badge-tag">JavaScript <i class="bi bi-x ms-1 cursor-pointer"></i></span>
+                <span class="badge-tag">Bootstrap 5 <i class="bi bi-x ms-1 cursor-pointer"></i></span>
+                <span class="badge-tag">QA Tests <i class="bi bi-x ms-1 cursor-pointer"></i></span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- COLUNA DA DIREITA: LINKS E PARTICIPANTES -->
+        <div class="col-lg-5">
+          
+          <!-- CARD DE LINKS EXTERNOS -->
+          <div class="login-container p-4 mb-4">
+            <h5 class="fw-bold mb-3 text-white"><i class="bi bi-link-45deg text-danger me-2"></i>Links & Repositórios</h5>
+
+            <!-- Link do Repositório (GitHub) -->
+            <div class="mb-3">
+              <label for="githubRepo" class="form-label-custom">Repositório no GitHub</label>
+              <div class="input-group custom-input-group">
+                <span class="input-group-text"><i class="bi bi-github"></i></span>
+                <input type="url" id="githubRepo" class="form-control" placeholder="https://github.com/usuario/projeto">
+              </div>
+            </div>
+
+            <!-- Link do Deploy / Demo -->
+            <div class="mb-0">
+              <label for="demoUrl" class="form-label-custom">Link de Produção / Demo</label>
+              <div class="input-group custom-input-group">
+                <span class="input-group-text"><i class="bi bi-globe"></i></span>
+                <input type="url" id="demoUrl" class="form-control" placeholder="https://meuprojeto.vercel.app">
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD DE ADICIONAR PARTICIPANTES -->
+          <div class="login-container p-4 mb-4">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <h5 class="fw-bold mb-0 text-white"><i class="bi bi-people text-danger me-2"></i>Participantes</h5>
+              <button type="button" class="btn btn-outline-danger btn-sm py-1 px-2 border-danger border-opacity-50">
+                <i class="bi bi-plus-lg"></i> Adicionar
+              </button>
+            </div>
+            <p class="text-custom-muted small mb-3">Adicione outros membros que colaboraram no projeto</p>
+
+            <!-- PARTICIPANTE ADICIONADO 1 (VOCÊ) -->
+            <div class="glass-overlay-card p-3 mb-2">
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-2">
+                  <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Você" class="rounded-circle border border-danger" style="width: 36px; height: 36px; object-fit: cover;">
+                  <div>
+                    <h6 class="fw-bold text-white mb-0 fs-6">Ana Clara Silva</h6>
+                    <small class="text-custom-muted d-block" style="font-size: 0.75rem;">Autor(a) principal</small>
+                  </div>
+                </div>
+                <span class="badge bg-danger bg-opacity-25 text-danger border border-danger border-opacity-25">Você</span>
+              </div>
+            </div>
+
+            <!-- FORMULÁRIO RÁPIDO PARA NOVO PARTICIPANTE -->
+            <div class="p-3 border border-secondary border-opacity-25 rounded-3 bg-dark bg-opacity-50 mt-3">
+              <small class="fw-bold text-white d-block mb-2">Adicionar Integrante:</small>
+              <div class="mb-2">
+                <input type="text" class="form-control form-control-dark" placeholder="Nome do integrante">
+              </div>
+              <div class="mb-2">
+                <input type="text" class="form-control form-control-dark" placeholder="Função (Ex: Back-End, Designer)">
+              </div>
+              <div class="row g-2">
+                <div class="col-6">
+                  <input type="url" class="form-control form-control-dark" placeholder="GitHub URL">
+                </div>
+                <div class="col-6">
+                  <input type="url" class="form-control form-control-dark" placeholder="LinkedIn URL">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- BOTÕES DE SALVAR / CANCELAR -->
+          <div class="d-flex gap-2">
+            <a href="perfil.html" class="btn btn-google w-50 text-center">Cancelar</a>
+            <button type="submit" class="btn btn-primary-red w-50">Publicar <i class="bi bi-check-lg ms-1"></i></button>
+          </div>
+
+        </div>
+
+      </div>
+    </form>
+
+  </div>
+
+</body>
+</html>

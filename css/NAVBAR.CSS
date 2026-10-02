@@ -1,0 +1,228 @@
+body{
+  background-color: #9a9cae;
+}
+
+/* ==== navbar menu ====*/
+
+.navbar {
+  width: 78%;
+  max-width: 78%;
+  margin: 20px auto 30px;
+  padding: 10px;
+  min-height: 80px;
+
+  background: #1a191999;
+
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+
+  border-radius: 18px;
+
+  box-shadow: 0 4px 30px #cbd5f533;
+
+  border: 2px solid rgba(255, 255, 255, 0.08);
+
+  z-index: 1000;
+}
+
+
+/* BOTÃO HAMBURGUER */
+.navbar-toggler {
+    border: none;
+    background: transparent;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-collapse {
+  background: transparent;
+}
+
+/* === linha animada cabeçalho === */
+.navbar .nav-link {
+  position: relative;
+  color: white !important;
+  padding-bottom: 8px;
+}
+
+.navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 40%;
+  bottom: 0;
+
+  width: 0;
+  height: 2px;
+
+  background-color: rgb(129, 2, 2);
+
+  transform: translateX(-30%);
+  transition: width 0.3s ease;
+}
+
+/* Animação ao passar o mouse */
+.navbar .nav-link:hover::after {
+  width: 70%;
+}
+
+/* container principal */
+
+.containerprincipal{
+    max-width: 1100px;
+}
+
+/*Container do perfil*/
+.login-container {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(18, 20, 29, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 0, 60, 0.2);
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  max-width: 1100px;
+  width: 100%;
+}
+
+/* Linha brilhante no topo do container */
+.login-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, #ff003c 50%, transparent 100%);
+  box-shadow: 0 0 15px #ff003c, 0 0 30px #ff003c;
+  z-index: 10;
+}
+
+.btn-primary-red {
+  background: linear-gradient(135deg, #ff003c 0%, #b3002a 100%);
+  border: none;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 0.65rem 1.25rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 0, 60, 0.35);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.btn-primary-red:hover {
+  background: linear-gradient(135deg, #ff1a4f 0%, #d60033 100%);
+  color: #ffffff;
+  box-shadow: 0 6px 20px rgba(255, 0, 60, 0.5);
+  transform: translateY(-1px);
+}
+
+/* foto de perfil */
+
+.avatarperfil{
+    margin-top: -60px;
+}
+
+.avatarperfil img{
+    width: 120px; 
+    height: 120px; 
+    object-fit: cover;
+}
+
+.avatarperfil i{
+    font-size: 0.85rem;
+}
+
+/*Texto cargo abaixo do nome */
+.text-custom-muted {
+  color: #9a9cae !important;
+}
+
+/* banner */
+.bg-card-header {
+  height: 180px;
+  background-image: 
+    linear-gradient(90deg, rgba(255, 0, 60, 0.4) 0%, rgba(5, 5, 8, 0.85) 100%), 
+    url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80');
+  background-position: center;
+  background-size: cover;
+}
+
+/* github e linkedin */
+.social-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: rgba(12, 13, 18, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  font-size: 1.1rem;
+}
+
+.social-btn:hover {
+  border-color: #ff003c;
+  color: #ff003c;
+  box-shadow: 0 0 10px rgba(255, 0, 60, 0.35);
+}
+
+.link-red {
+  color: #ff003c;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.2s ease;
+  text-shadow: 0 0 5px rgba(255, 0, 60, 0.3);
+}
+
+.link-red:hover {
+  color: #ff3363;
+  text-decoration: underline;
+  text-shadow: 0 0 10px rgba(255, 0, 60, 0.6);
+}
+
+/* =======8. TAGS & BADGES Localização e Habilidades ===== */
+.badge-tag {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #d1d5db;
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* === Rodapé */
+.footer {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+  
+  background: #1a191999;
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 4px 30px #cbd5f533;
+}
+
+
+/* LINKS DO FOOTER */
+.footer .footerlinks a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* HOVER */
+.footer .footerlinks a:hover {
+  color: #C64132 !important;
+}

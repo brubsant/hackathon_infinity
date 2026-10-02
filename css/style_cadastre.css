@@ -1,0 +1,252 @@
+body {
+  color: #ffffff;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* 1 - Efeito neon no body */
+.glow-bg-top-left {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  top: -150px;
+  left: -150px;
+  background: radial-gradient(circle, rgba(255, 0, 60, 0.35) 0%, rgba(0, 0, 0, 0) 70%);
+  filter: blur(50px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.glow-bg-bottom-right {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  bottom: -200px;
+  right: -150px;
+  background: radial-gradient(circle, rgba(255, 0, 60, 0.25) 0%, rgba(0, 0, 0, 0) 70%);
+  filter: blur(60px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* 2 -container principal com borda neon superior */
+.login-container {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(12, 13, 18, 0.95);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  overflow: hidden;
+  max-width: 1100px;
+  width: 100%;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.9);
+}
+
+/* 3 -Linha brilhante no topo do container */
+.login-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, #ff003c 50%, transparent 100%);
+  box-shadow: 0 0 15px #ff003c, 0 0 30px #ff003c;
+  z-index: 10;
+}
+
+/* 4 - Efeito neon no lado esquerdo do container */
+.hero-side {
+  background: linear-gradient(180deg, rgba(7, 7, 10, 0.3) 0%, rgba(7, 7, 10, 0.85) 100%),
+              url('/assets/cadastre-se.png') center/cover no-repeat;
+  position: relative;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 550px;
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* 5. COLUNA DA DIREITA (FORMULÁRIO DE LOGIN) */
+.form-side {
+  padding: 45px 50px;
+}
+
+/* Logo da infinity */
+.brand-logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 38px;
+}
+
+.brand-logo-img {
+  max-height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Botão Google SSO */
+.btn-google {
+  background-color: #111319;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 12px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-google:hover {
+  border-color: rgba(255, 0, 60, 0.5);
+  box-shadow: 0 0 15px rgba(255, 0, 60, 0.2);
+  background-color: #171a22;
+  color: #ffffff;
+}
+
+/* Divisor horizontal */
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #b0b5c4;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  margin: 25px 0;
+}
+
+.divider::before, 
+.divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.divider span {
+  padding: 0 15px;
+  color: #ff003c;
+  font-weight: 600;
+  text-shadow: 0 0 8px rgba(255, 0, 60, 0.6);
+}
+
+/* 6. INPUTS & FORMULÁRIO */
+.form-label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.custom-input-group {
+  background-color: #111319;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.custom-input-group:focus-within {
+  border-color: #ff003c;
+  box-shadow: 0 0 15px rgba(255, 0, 60, 0.6);
+}
+
+.custom-input-group .input-group-text {
+  background: transparent;
+  border: none;
+  color: #b0b5c4;
+  font-size: 1.1rem;
+}
+
+.custom-input-group .form-control {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  box-shadow: none;
+  padding: 12px 12px 12px 0;
+  font-size: 0.95rem;
+}
+
+/* Escrita dentro dos campos do formulário */
+.custom-input-group .form-control::placeholder {
+  color: #8c92a4 !important;
+  opacity: 1;
+}
+
+/* Checkbox */
+.form-check-input {
+  background-color: #111319;
+  border-color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+}
+
+.form-check-input:checked {
+  background-color: #ff003c;
+  border-color: #ff003c;
+  box-shadow: 0 0 8px rgba(255, 0, 60, 0.6);
+}
+
+/* 7. Botão de login */
+.btn-primary-red {
+  background: linear-gradient(90deg, #ff003c 0%, #ff2a5f 100%);
+  border: none;
+  border-radius: 12px;
+  color: #ffffff;
+  padding: 14px;
+  font-weight: 600;
+  box-shadow: 0 0 25px rgba(255, 0, 60, 0.6);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary-red:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 35px rgba(255, 0, 60, 0.85);
+  color: #ffffff;
+}
+
+/* Texto de rodapé */
+.text-custom-muted {
+  color: #b0b5c4 !important;
+}
+
+/* Links vermelhos */
+.link-red {
+  color: #ff003c;
+  text-decoration: none;
+  font-size: 0.85rem;
+  text-shadow: 0 0 5px rgba(255, 0, 60, 0.3);
+}
+
+.link-red:hover {
+  text-decoration: underline;
+  text-shadow: 0 0 10px rgba(255, 0, 60, 0.6);
+}
+
+/* Botões Sociais */
+.social-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #111319;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+  background: rgba(255, 0, 60, 0.15);
+  border-color: #ff003c;
+  box-shadow: 0 0 12px rgba(255, 0, 60, 0.6);
+  color: #ffffff;
+}

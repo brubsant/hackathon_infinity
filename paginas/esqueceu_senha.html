@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recuperar Senha</title>
+  
+  <!-- Bootstrap 5 CSS (Via CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Bootstrap Icons (Via CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  
+  <!-- Seu arquivo CSS externo existente -->
+  <link rel="stylesheet" href="/css/style_senha.css">
+</head>
+<body>
+
+  <!-- ELEMENTOS DE LUZ NEON AO FUNDO -->
+  <div class="glow-bg-top-left"></div>
+  <div class="glow-bg-bottom-right"></div>
+
+  <!-- CONTAINER PRINCIPAL -->
+  <div class="container-fluid p-0 login-container">
+    <div class="row g-0">
+      
+      <!-- COLUNA DA ESQUERDA (HERO & VITRINE) -->
+      <div class="col-lg-6 hero-side d-none d-lg-flex">
+      </div>
+
+      <!-- COLUNA DA DIREITA (FORMULÁRIO DE ESQUECEU A SENHA) -->
+      <div class="col-lg-6 form-side">
+        
+        <!-- Header com Logo da Infinity School -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <div class="d-flex align-items-center gap-2">
+            <!-- LOGO INFINITY SCHOOL -->
+            <div class="brand-logo-container">
+              <img src="/assets/Logo padrão.png" alt="Infinity School Logo" class="brand-logo-img">
+            </div>
+            
+          </div>
+          <a href="/index.html" class="btn btn-outline-secondary btn-sm rounded-pill text-white border-secondary border-opacity-50 text-decoration-none">
+            <i class="bi bi-arrow-left text-danger me-1"></i> Voltar tela inicial
+          </a>
+        </div>
+
+        <!-- Título principal -->
+        <div class="mb-4">
+          <div class="d-inline-flex align-items-center justify-content-center bg-danger bg-opacity-10 border border-danger border-opacity-25 rounded-circle p-3 mb-3">
+            <i class="bi bi-key-fill text-danger fs-3"></i>
+          </div>
+          <h3 class="fw-bold mb-1">Esqueceu sua senha?</h3>
+          <p class="text-custom-muted small mb-0">
+            Digite o e-mail cadastrado na sua conta. Enviaremos um link de instrução para a redefinição da senha.
+          </p>
+        </div>
+
+        <!-- Formulário de Recuperação -->
+        <form id="forgotPasswordForm">
+          
+          <!-- Campo: E-mail -->
+          <div class="mb-4">
+            <label for="recoveryEmail" class="form-label">E-mail Cadastrado</label>
+            <div class="input-group custom-input-group">
+              <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+              <input type="email" id="recoveryEmail" class="form-control" placeholder="seu.email@exemplo.com" required>
+            </div>
+          </div>
+
+          <!-- Botão Enviar Link -->
+          <button type="submit" class="btn btn-primary-red w-100 mb-4">
+            Enviar Instruções <i class="bi bi-send-fill ms-2"></i>
+          </button>
+
+          <!-- Divisor -->
+          <div class="divider">
+            <span>● LEMBROU A SENHA? ●</span>
+          </div>
+
+          <!-- Rodapé com Links -->
+          <div class="text-center small mb-4">
+            <p class="text-custom-muted mb-2">
+              Voltar para o <a href="/paginas/login.html" class="link-red fw-bold">Fazer Login</a>
+            </p>
+            <p class="text-custom-muted mb-0">
+              Ainda não tem conta? <a href="/paginas/cadastre.html" class="link-red fw-bold">Cadastre-se</a>
+            </p>
+          </div>
+
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

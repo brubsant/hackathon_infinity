@@ -1,0 +1,160 @@
+/* ==== navbar menu ====*/
+
+.navbar {
+  width: 78%;
+  max-width: 78%;
+  margin: 20px auto 30px;
+  padding: 10px;
+  min-height: 80px;
+
+  background: #1a191999;
+
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+
+  border-radius: 18px;
+
+  box-shadow: 0 4px 30px #cbd5f533;
+
+  border: 2px solid rgba(255, 255, 255, 0.08);
+
+  z-index: 1000;
+}
+
+
+/* BOTÃO HAMBURGUER */
+.navbar-toggler {
+  border: none;
+  background: transparent;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-collapse {
+  background: transparent;
+}
+
+/* === linha animada cabeçalho === */
+.navbar .nav-link {
+  position: relative;
+  color: white !important;
+  padding-bottom: 8px;
+}
+
+.navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 40%;
+  bottom: 0;
+
+  width: 0;
+  height: 2px;
+
+  background-color: rgb(129, 2, 2);
+
+  transform: translateX(-30%);
+  transition: width 0.3s ease;
+}
+
+/* Animação ao passar o mouse */
+.navbar .nav-link:hover::after {
+  width: 70%;
+}
+
+/* === Sobre nós */
+
+.card-neon {
+  max-width: 500px; /* Largura desejada */
+  width: 100%;
+  height: auto;
+
+object-fit: cover;
+
+
+  box-shadow:
+    0 0 8px 1px #ffffff,
+    0 0 10px 6px rgba(152, 132, 226, 0.4),
+    0 0 35px 16px rgba(2, 2, 2, 0.2);
+}
+
+/* titulo */
+
+.titulo-secao{
+  margin-left: 60px;
+   margin-top: 30px;
+    margin-bottom: 25px;
+}
+
+.subtitulo {
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    font-weight: 600;
+    color: #FF3B3B;
+    opacity: 0.8;
+}
+
+.titulo-secao h1 {
+    font-weight: 700;
+}
+
+.linha-neon {
+    width: 70px;
+    height: 3px;
+    border-radius: 10px;
+    background: #FF3B3B;
+    box-shadow: 0 0 8px #FF3B3B,
+                0 0 15px #f8f7f7;
+}
+
+/* === Imagem do sobre nós */
+.imagem{
+  width: 400px; 
+  height: 400px; 
+  object-fit: cover;
+}
+
+
+/* === Card linkedin */
+
+.card{
+  width: 180px;
+}
+
+.inicialnome{
+  width:64px;
+  height:64px;
+}
+
+/* === Icone linkedin  ===*/
+
+.bi{
+  margin: 0px 5px 0px;
+}
+
+/* === Rodapé */
+.footer {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+
+  background: #1a191999;
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 4px 30px #cbd5f533;
+}
+
+
+/* LINKS DO FOOTER */
+.footer .footerlinks a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* HOVER */
+.footer .footerlinks a:hover {
+  color: #C64132 !important;
+}
+
